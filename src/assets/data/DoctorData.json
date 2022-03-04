@@ -1,0 +1,40 @@
+[
+    {
+        "imagePath1":"https://assets-global.website-files.com/5ee7039040ea6efb80d7521c/5fbbabab833f7012d282c981_Dr.Neha-Agarwal-2.jpg",
+       "Name":"Dr. Neha Tiwari",
+       "Degree":"MBBS. MD.",
+       "Specility":"Mother and Child Care"
+    },
+    {
+        "imagePath1":"https://assets.lybrate.com/img/documents/doctor/dp/19c1b485baf974ab62efdd2507a24ec0/Pulmonology-MahavirBagrecha-Pune-9284d9.jpg",
+       "Name":"Dr. Pankaj Tripathi",
+       "Degree":"BDS.",
+       "Specility":"Dental specialist"
+    },
+    {
+        "imagePath1":"https://starimagingindia.com/Images/DoctorProfileImages/59ef3b5fe955b_dr_anupama_patil.png",
+       "Name":"Dr. Ganaga Patil",
+       "Degree":"MBBS. MD.(Orth.)",
+       "Specility":"Orthopedic"
+    },
+    {
+        "imagePath1":"https://www.chandralokhospital.com/images/displayimage/2ee0778940ad3622e1457d3216229e59780d9b8d60fd6df637cb9.jpeg?type=d",
+       "Name":"Dr. Tushar Mahajan",
+       "Degree":"BAMS.",
+       "Specility":"Allopathy"
+    },
+
+    {
+        "imagePath1":"https://www.motherhoodindia.com/wp-content/uploads/2021/09/Pune-Dr.-Aditi-Wadhwa-247x300.jpg",
+       "Name":"Dr. Nayana Deshmukh",
+       "Degree":"BAMS.",
+       "Specility":"Allopathy"
+    },
+    {
+        "imagePath1":"https://cdn.askapollo.com/live/images/doctors/paediatric-surgery/dr-deepak-kumar-kandpal-paediatric-surgery-in-lucknow..jpg",
+       "Name":"Dr. Mahesh Kamat",
+       "Degree":"BAMS.",
+       "Specility":"Allopathy"
+    }
+
+]

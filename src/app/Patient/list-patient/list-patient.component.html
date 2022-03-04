@@ -1,0 +1,54 @@
+<div class="container">
+
+  <p *ngIf="Patient.length == 0" class="no-data text-center">There is no Patient added yet!</p>
+
+
+  <table class="table table-bordered" *ngIf="Patient.length > 0">
+    <thead class="table">
+      <tr class="heading">
+        <!-- <th scope="col">Patient ID</th> -->
+        <th scope="col">Name</th>
+        <th scope="col">gender</th>
+        <th scope="col">Age</th>
+        <th scope="col">Blood</th>
+        <th scope="col ">Number</th>
+        <th scope="col ">Diease</th>
+        <th scope="col ">Doctor</th>
+        <th scope="col ">Addmission</th>
+        <th scope="col ">Discharge</th>
+        <th scope="col ">Address</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of Patient; let i = index">
+        <!-- <th scope="row">{{patient._id}}</th> -->
+        <td>{{patient.name}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.age}}</td>
+        <td>{{patient.bloodgroup}}</td>
+        <td>{{patient.number}}</td>
+        <td>{{patient.diease}}</td>
+        <td>{{patient.concernDoctor}}</td>
+        <td>{{patient.addmissionDate | date:'medium'}}</td>
+        <td>{{patient.dischargeDate | date:'medium'}}</td>
+        <td>{{patient.address}}</td>
+        <td class="text-center edit-block">
+          <span class="edit" [routerLink]="['editpatient/', patient._id]">
+            <!-- <button type="button" class="btn btn-success btn-sm">Edit</button> -->
+            <button mat-mini-fab color="primary" type="button" aria-label="Example icon button with a edit icon">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </span>
+
+          <span class="delete" (click)="removePatient(patient, i)">
+            <!-- <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
+            <button mat-mini-fab color="primary" type="button" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

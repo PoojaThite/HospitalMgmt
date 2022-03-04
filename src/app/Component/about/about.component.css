@@ -1,0 +1,33 @@
+.far{
+      color: navy;
+      font-size: 30px;
+      margin: auto;
+}
+
+a{
+   margin-left: 50px;
+   width: 150px;
+}
+
+.card{
+    border: none;
+}
+
+.box{
+    margin: auto;
+}
+
+.banner{
+    background-image: url('/assets/Images/banner1.png');
+    height: 300px;
+    /* width: 100%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+
+}
+
+mat-card{
+    width: 100%;
+    margin-left: 160px;
+}

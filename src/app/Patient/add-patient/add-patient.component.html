@@ -1,0 +1,155 @@
+<mat-card><div class="container">
+    <form [formGroup]="PatientForm" (submit)="onSubmit()">
+
+        <div class="row">
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Name</mat-label>
+                    <input matInput type="text" formControlName="name">
+                </mat-form-field>
+                <div *ngIf="f['name'].invalid && (f['name'].dirty || f['name'].touched)" class="text-danger">
+                    <div *ngIf="f['name'].errors?.['required']">
+                        Name **
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Gender</mat-label>
+                    <mat-select formControlName="gender">
+                        <mat-option value="female">Female</mat-option>
+                        <mat-option value="male">Male</mat-option>
+                        <mat-option value="unkown">unkown</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <div *ngIf="f['gender'].invalid && (f['gender'].dirty || f['gender'].touched)" class="text-danger">
+                    <div *ngIf="f['gender'].errors?.['required']">
+                        Gender **
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Age</mat-label>
+                    <input matInput type="text" formControlName="age">
+                </mat-form-field>
+                <div *ngIf="f['age'].invalid && (f['age'].dirty || f['age'].touched)" class="text-danger">
+                    <div *ngIf="f['age'].errors?.['required']">
+                        age **
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row mt-3">
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Blood Group</mat-label>
+                    <input matInput type="text" formControlName="bloodgroup">
+                </mat-form-field>
+                <div *ngIf="f['bloodgroup'].invalid && (f['bloodgroup'].dirty || f['bloodgroup'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['bloodgroup'].errors?.['required']">
+                        bloodgroup **
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Number</mat-label>
+                    <input matInput type="text" formControlName="number" maxlength="10">
+                </mat-form-field>
+                <div *ngIf="f['number'].invalid && (f['number'].dirty || f['number'].touched)" class="text-danger">
+                    <div *ngIf="f['number'].errors?.['required']">
+                        number **
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Diease</mat-label>
+                    <input matInput type="text" formControlName="diease">
+                </mat-form-field>
+                <div *ngIf="f['diease'].invalid && (f['diease'].dirty || f['diease'].touched)" class="text-danger">
+                    <div *ngIf="f['diease'].errors?.['required']">
+                        diease **
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-3">
+
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Concern Doctor</mat-label>
+                    <input matInput type="text" formControlName="concernDoctor">
+                </mat-form-field>
+                <div *ngIf="f['concernDoctor'].invalid && (f['concernDoctor'].dirty || f['concernDoctor'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['concernDoctor'].errors?.['required']">
+                        concernDoctor **
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Addmission Date</mat-label>
+                    <input matInput type="date" formControlName="addmissionDate">
+                </mat-form-field>
+                <div *ngIf="f['addmissionDate'].invalid && (f['addmissionDate'].dirty || f['addmissionDate'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['addmissionDate'].errors?.['required']">
+                        addmissionDate **
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <mat-form-field appearance="fill">
+                    <mat-label>Discharge date</mat-label>
+                    <input matInput type="date" formControlName="dischargeDate">
+                </mat-form-field>
+                <div *ngIf="f['dischargeDate'].invalid && (f['dischargeDate'].dirty || f['dischargeDate'].touched)"
+                    class="text-danger">
+                    <div *ngIf="f['dischargeDate'].errors?.['required']">
+                        addmissionDate **
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="row mt-5">
+    <div class="col-md-6">
+        <mat-form-field class = "address" appearance="fill">
+            <mat-label>Address</mat-label>
+            <textarea  class="form-control" matInput formControlName="address"></textarea>
+          </mat-form-field>
+        <div *ngIf="f['address'].invalid && (f['address'].dirty || f['address'].touched)" class="text-danger">
+            <div *ngIf="f['address'].errors?.['required']">
+                address **
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row mt-5">
+    <div class="col-md-3">
+        <button mat-raised-button color="primary"  type="submit">Register</button>
+        <!-- <button class="btn btn-success btn-lg btn-block" type="submit">Register</button> -->
+
+    </div>
+</div>
+    </form>
+</div>
+
+</mat-card>

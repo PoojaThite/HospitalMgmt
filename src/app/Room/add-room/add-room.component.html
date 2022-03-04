@@ -1,0 +1,32 @@
+<mat-card>
+    <form [formGroup]="Roomform" (submit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Room-type</mat-label>
+            <mat-select formControlName="RoomType" >
+              <mat-option value="ICU">ICU</mat-option>
+              <mat-option value="Special">Special</mat-option>
+              <mat-option value="General">General</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+        type="text" 
+        formControlName="TotalRoom" 
+        placeholder="TotalRoom"
+        >
+        <mat-error *ngIf="myForm['TotalRoom'].errors && myForm['TotalRoom'].errors['required']">Please enter a total Room.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+        type="text" 
+        formControlName="AvailableRoom" 
+        placeholder="AvailableRoom"
+        >
+        <mat-error *ngIf="myForm['AvailableRoom'].errors && myForm['AvailableRoom'].errors['required']">Please enter a availble room.</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" >Add Room</button>
+
+    </form>
+  </mat-card>

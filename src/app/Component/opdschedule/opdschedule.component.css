@@ -1,0 +1,14 @@
+table {
+    width: 100%;
+  }
+
+  .box{
+      background-color: lightblue;
+      height: 50PX;
+      width: 100%;
+  }
+
+  .TEXT{
+      margin-left: 150px;
+      font-size: 35px;
+  }

@@ -1,0 +1,49 @@
+
+
+<header>
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+        <div class="position-sticky">
+            <div class="list-group list-group-flush mx-3 mt-4">
+                <div><p style="color:navy;">Welcome In Patient Portal</p></div>
+                <ul id="collapseExample1" class="collapse show list-group list-group-flush">
+                    <li class="list-group-item py-1">
+                        <!-- <button (click)="viewMedicine()">View Medicine</button> -->
+                       <button mat-raised-button (click)="viewMedicine()">View Medicine</button>
+                    </li>
+            
+                    <li class="list-group-item py-1">
+                        <!-- <button (click)="viewRoom()">View Room</button> -->
+                       <button mat-raised-button (click)="viewRoom()">View Room</button>
+                    </li>
+                    <li class="list-group-item py-1">
+                        <!-- <button (click)="bookAppointment()">bookAppointment</button> -->
+                       <button mat-raised-button (click)="bookAppointment()">bookAppointment</button>
+
+                    </li>
+
+                    <li class="list-group-item py-1">
+                        <!-- <button (click)="CancelAppointment()">ShowAppointment</button> -->
+                       <button mat-raised-button (click)="CancelAppointment()">ShowAppointment</button>
+
+                    </li>
+
+                    <li class="list-group-item py-1">
+                        <!-- <button (click)="CancelAppointment()">ShowAppointment</button> -->
+                       <button mat-raised-button (click)="addTicket()">Add Ticket</button>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main style=" margin-left: 230px;">
+    <div class="container pt-4">
+        <router-outlet></router-outlet>
+
+
+    </div>
+    
+</main>

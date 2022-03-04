@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row mt-5" >
+        <div class="col-md-3" *ngFor="let doc of Doctors">
+            <div class="card mt-5" style="width: 80%">
+                <img src="{{doc.imagePath1}}" class="card-img-top" alt="..." height="150px" width="90%">
+                <div class="card-body">
+                    <h4 class="card-title text-center">{{doc.Name}}</h4>
+                    <h5 class="card-text text-center">{{doc.Degree}}</h5>
+                    <h4 class="card-text text-center">{{doc.Specility}}</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

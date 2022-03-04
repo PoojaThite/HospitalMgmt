@@ -1,0 +1,36 @@
+
+<mat-card>
+    <form [formGroup]="editTicketForm" (submit)="onSubmit()">
+        <mat-form-field appearance="fill">
+            <mat-label>Date</mat-label>
+            <input matInput
+            type="date" 
+            formControlName="date" 
+            placeholder="TotalRoom"
+            >
+          </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Name</mat-label>
+
+        <input matInput
+        type="text" 
+        formControlName="name" 
+        placeholder="Name"
+        >
+        <mat-error *ngIf="myForm['name'].errors && myForm['name'].errors['required']">Please enter a name.</mat-error>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Problem</mat-label>
+        <input matInput
+        type="text" 
+        formControlName="problem" 
+        placeholder="Problem"
+        >
+        <mat-error *ngIf="myForm['problem'].errors && myForm['problem'].errors['required']">Please enter a Problem.</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" >Edit Ticket</button>
+
+    </form>
+  </mat-card>

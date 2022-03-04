@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <div class="card-body">
+            <form [formGroup]="editMedicineForm" (submit)="onSubmit()">
+                <div class="form-group">
+                    <label for="inputName">Medicine Name</label>
+                    <input class="form-control" type="text" formControlName="medicineName">
+                </div>
+            
+                <div class="form-group">
+                    <label for="inputName">Quantity</label>
+                    <input class="form-control" type="text" formControlName="quantity">
+                </div>
+
+                <div class="form-group">
+                    <label for="inputName">Price</label>
+                    <input class="form-control" type="text" formControlName="price">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success btn-lg btn-block" type="submit">update Medicine</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

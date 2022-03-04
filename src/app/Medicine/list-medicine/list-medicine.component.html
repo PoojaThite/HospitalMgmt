@@ -1,0 +1,47 @@
+<div class="container">
+    <!-- No data message -->
+    <p *ngIf="Medicine.length == 0" class="no-data text-center">There is no Medicine added yet!</p>
+  
+    <!-- Employee list -->
+    <table class="table table-bordered" *ngIf="Medicine.length > 0">
+      <thead class="table">
+        <tr class="heading">
+          <th scope="col">Medicine ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Quantity</th>
+          <th scope="col center">Price</th>
+          <th></th>
+          <!-- <th scope="col center">change</th> -->
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let medicine of Medicine; let i = index">
+          <th scope="row">{{i}}</th>
+          <td>{{medicine.medicineName}}</td>
+          <td>{{medicine.quantity}}</td>
+          <td>{{medicine.price}}</td>
+    
+
+          <td class="text-center edit-block" *ngIf="userIsAuthenticated ">
+            <span class="edit" [routerLink]="['editmedicine/', medicine._id]">
+              <!-- <button type="button" class="btn btn-success btn-sm" >Edit</button> -->
+              <button mat-mini-fab color="primary" type="button" aria-label="Example icon button with a edit icon">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </span>
+            <span class="delete" (click)="removeMedicine(medicine, i)">
+            <!-- <button type="button" class="btn btn-danger btn-sm">Delete</button> -->
+            <button mat-mini-fab color="primary" type="button" aria-label="Example icon button with a delete icon">
+              <mat-icon>delete</mat-icon>
+            </button>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  
+

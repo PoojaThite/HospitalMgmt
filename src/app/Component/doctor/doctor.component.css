@@ -1,0 +1,11 @@
+/* .box{
+    margin-right: 400px;
+} */
+
+.card:hover{
+    box-shadow: 1px 1px 2px 1px gray;
+}
+
+.card{
+  border: 1px solid black;
+}

@@ -1,0 +1,45 @@
+<mat-card>
+    <form [formGroup]="form" (submit)="onSignup()" *ngIf="!isLoading">
+
+
+      <mat-form-field>
+        <input matInput
+        type="text" 
+        formControlName="name" 
+        placeholder="Name"
+        >
+        <mat-error *ngIf="myForm['name'].errors && myForm['name'].errors['required']">Please enter a Name.</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field>
+        <input matInput 
+        formControlName="email"  
+        type="email" 
+        placeholder="E-Mail">
+        <mat-error *ngIf="myForm['email'].errors && myForm['email'].errors['required']">Please enter a valid email.</mat-error>
+      </mat-form-field>
+
+
+      <mat-form-field appearance="fill">
+        <mat-label>Select</mat-label>
+        <mat-select  formControlName="type" >
+          <mat-option value="Admin" disabled>Admin</mat-option>
+          <mat-option value="Patient">Patient</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <!-- <mat-error *ngIf="myForm['type'].errors && myForm['type'].errors['required']">Please enter a type.</mat-error> -->
+
+      <mat-form-field>
+        <input matInput
+        type="password" 
+        formControlName="password" 
+        placeholder="Password"
+        >
+
+        <mat-error *ngIf="myForm['password'].errors && myForm['password'].errors['required']">Please enter a valid password.</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="accent" type="submit" *ngIf="!isLoading">Signup</button>
+
+    </form>
+  </mat-card>
